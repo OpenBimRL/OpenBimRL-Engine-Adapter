@@ -1,4 +1,6 @@
-package engine.openbimrl.inf.bi.rub.de.ifc
+package de.rub.bi.inf.openbimrl.engine.ifc
+
+import java.util.MissingResourceException
 
 abstract class Adapter protected constructor() {
     companion object {
@@ -26,8 +28,10 @@ abstract class Adapter protected constructor() {
     abstract val IFC4: IIFC4
 
     interface IIFC4 {
-        fun <T: IIFCClass> create(clazz: Class<T>, vararg params: Any) :  T
+        fun <T : IIFCClass> create(clazz: Class<T>, vararg params: Any?): T
     }
 
     class SingletonException(message: String) : RuntimeException(message)
+    class MissingArgumentException(message: String, className: String, key: String) :
+        MissingResourceException(message, className, key)
 }
