@@ -6,12 +6,7 @@
     
     <artifactId>OpenBimRL-Engine-Adapter</artifactId>
     <version>2022.11.1</version>
-    
-    <parent>
-        <groupId>inf.bi.rub.de</groupId>
-        <artifactId>OpenBimRL-APP</artifactId>
-        <version>1</version>
-    </parent>
+    <groupId>inf.bi.rub.de</groupId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -23,6 +18,7 @@
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
+            <version>1.9.10</version>
         </dependency>
     </dependencies>
 
